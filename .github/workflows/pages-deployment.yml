@@ -5,16 +5,9 @@ on:
     branches:
       - master
 
-concurrency:
-  group: pages-deployment
-  cancel-in-progress: true
-
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE20: true  # Node20 사용 강제 설정
-
     steps:
       - name: Check out the repository
         uses: actions/checkout@v3
@@ -28,10 +21,12 @@ jobs:
         run: npm install
 
       - name: Build the project
-        run: npm run build
+        run: npm run build  # build 폴더가 만들어지도록 설정
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs
+        run: |
+          mkdir -p ./docs
+          cp -r ./build/* ./docs/
+          git add .
+          git commit -m "Deploy GitHub Pages"
+          git push origin master
