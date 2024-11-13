@@ -21,12 +21,17 @@ jobs:
         run: npm install
 
       - name: Build the project
-        run: npm run build  # build 폴더가 만들어지도록 설정
+        run: npm run build  # build 폴더가 생성되도록 설정
 
-      - name: Deploy to GitHub Pages
+      - name: Move build files to docs folder
         run: |
           mkdir -p ./docs
-          cp -r ./build/* ./docs/
+          cp -r ./build/* ./docs/  # build 파일을 docs 폴더로 복사
+
+      - name: Commit and push to master
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
           git add .
-          git commit -m "Deploy GitHub Pages"
-          git push origin master
+          git commit -m "Deploy GitHub Pages to docs folder"
+          git push origin master  # master 브랜치로 푸시
