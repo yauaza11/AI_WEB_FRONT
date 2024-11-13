@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.7005cc11.css",
+    "main.js": "/static/js/main.4f68bb00.js",
+    "static/media/cafe_chuchu_profile.png": "/static/media/cafe_chuchu_profile.3b002eaef9dad475fe0d.png",
+    "static/media/cafe_chuchu_wishlist.png": "/static/media/cafe_chuchu_wishlist.b74ffbb2183bf4a851d0.png",
+    "static/media/cafe_chuchu_myprofile.png": "/static/media/cafe_chuchu_myprofile.6c923abab3a49b65bd39.png",
+    "static/media/cafe_chuchu_share.png": "/static/media/cafe_chuchu_share.1d3e19e9f2bd3107107b.png",
+    "static/media/empty_heart_icon.png": "/static/media/empty_heart_icon.cc16812ce98af8eb3f7b.png",
+    "static/media/cafe_chuchu_password_check-O.png": "/static/media/cafe_chuchu_password_check-O.70894e0de02a72b48e24.png",
+    "static/media/cafe_chuchu_password_check-X.png": "/static/media/cafe_chuchu_password_check-X.01e09cb08a054dfd295c.png",
+    "static/media/cafe_chuchu_search.png": "/static/media/cafe_chuchu_search.f8ea1ef074c1e7dba842.png",
+    "static/media/male_icon.png": "/static/media/male_icon.aa97ee613a22c7399e96.png",
+    "static/media/cafe_chuchu_check.png": "/static/media/cafe_chuchu_check.a461030e3cbcce1a7a12.png",
+    "static/media/female_icon.png": "/static/media/female_icon.05128a6d3f6d598066e0.png",
+    "static/media/cafe_chuchu_star.png": "/static/media/cafe_chuchu_star.720a1b96e8f99044a264.png",
+    "static/media/filled_heart_icon.png": "/static/media/filled_heart_icon.549e28df2faefafb54b3.png",
+    "static/media/cafe_chuchu_mypage.png": "/static/media/cafe_chuchu_mypage.0130bbadedb88d91cff8.png",
+    "index.html": "/index.html",
+    "main.7005cc11.css.map": "/static/css/main.7005cc11.css.map",
+    "main.4f68bb00.js.map": "/static/js/main.4f68bb00.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7005cc11.css",
+    "static/js/main.4f68bb00.js"
+  ]
+}
