@@ -44,10 +44,10 @@ const MyPage = () => {
   }, [navigate,handleLogout]);
 
   // 로그아웃 함수
-  const handleLogout = () => {
+  const handleLogout =( () => {
     localStorage.removeItem('token');
     navigate('/login');
-  };
+  }, [navigate]);
 
   // 페이지 이동 함수
   const goToHome = () => {

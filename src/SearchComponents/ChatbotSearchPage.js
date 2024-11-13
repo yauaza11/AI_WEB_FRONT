@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './ChatbotSearchPage.css';
 import starIcon from '../assets/images/cafe_chuchu_star.png';
@@ -11,7 +11,7 @@ const ChatbotSearchPage = () => {
   const [messages, setMessages] = useState([]);
   const [inputText, setInputText] = useState('');
   const [cafeList, setCafeList] = useState([]);
-  const [replyCount, setReplyCount] = useState(0);
+  //const [replyCount, setReplyCount] = useState(0);
   const [likedItems, setLikedItems] = useState({});
 
   // 토큰 가져오기

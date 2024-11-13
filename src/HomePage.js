@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback} from 'react';
+import React, { useState, useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
 import logo from './assets/images/cafe_chuchu_logo.png';
 import myPageIcon from './assets/images/cafe_chuchu_mypage.png';
