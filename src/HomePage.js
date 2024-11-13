@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback} from 'react';
 import { useNavigate } from 'react-router-dom';
 import logo from './assets/images/cafe_chuchu_logo.png';
 import myPageIcon from './assets/images/cafe_chuchu_mypage.png';
@@ -39,7 +39,7 @@ const HomePage = () => {
   };
 
   // 사용자 선호 키워드 가져오기
-  const fetchUserPreferences = async () => {
+  const fetchUserPreferences = (async () => {
     const token = getToken();
     if (!token) return;
 
@@ -73,7 +73,7 @@ const HomePage = () => {
       console.error('사용자 선호 키워드 가져오기 오류:', error);
       setError('서버 오류 발생');
     }
-  };
+  }, [getToken]);
 
   // 카페 목록 가져오기
   const fetchCafes = async (categoriesInput) => {
@@ -104,7 +104,7 @@ const HomePage = () => {
   };
 
   // 찜 목록 가져오기
-  const fetchFavorites = async () => {
+  const fetchFavorites =( async () => {
     const token = getToken();
     if (!token) return;
 
@@ -130,7 +130,7 @@ const HomePage = () => {
     } catch (error) {
       console.error('찜 목록 가져오기 오류:', error);
     }
-  };
+  }, [getToken]);
 
   // 찜 상태 토글
   const toggleLike = async (cafeId) => {
@@ -163,7 +163,7 @@ const HomePage = () => {
       await fetchFavorites();
     };
     initializeData();
-  }, [fetchFavorites, fetchUserPreferences]);
+  }, [fetchUserPreferences,fetchFavorites]);
 
   const goToMyPage = () => navigate('/mypage');
   const goToKeywordSearch = () => navigate('/keyword-search');
