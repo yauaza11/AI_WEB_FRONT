@@ -13,6 +13,12 @@ const MyPage = () => {
   const [isModalOpen, setModalOpen] = useState(false);
   const [profile, setProfile] = useState(null);
 
+  // 로그아웃 함수
+  const handleLogout = useCallback(() => {
+    localStorage.removeItem('token');
+    navigate('/login');
+  }, [navigate]);
+  
   // 프로필 정보 가져오기
   useEffect(() => {
     const fetchProfile = async () => {
@@ -43,11 +49,7 @@ const MyPage = () => {
     fetchProfile();
   }, [navigate,handleLogout]);
 
-  // 로그아웃 함수
-  const handleLogout =( () => {
-    localStorage.removeItem('token');
-    navigate('/login');
-  }, [navigate]);
+
 
   // 페이지 이동 함수
   const goToHome = () => {
