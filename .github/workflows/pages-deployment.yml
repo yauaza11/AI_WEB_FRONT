@@ -3,7 +3,7 @@ name: GitHub Pages Deployment
 on:
   push:
     branches:
-      - master
+      - master  # master 브랜치에서 푸시되었을 때 실행
 
 jobs:
   build:
@@ -28,10 +28,10 @@ jobs:
           mkdir -p ./docs
           cp -r ./build/* ./docs/  # build 파일을 docs 폴더로 복사
 
-      - name: Commit and push to master
+      - name: Commit and push to gh-pages
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add .
           git commit -m "Deploy GitHub Pages to docs folder"
-          git push origin master  # master 브랜치로 푸시
+          git push origin gh-pages  # gh-pages 브랜치로 푸시
