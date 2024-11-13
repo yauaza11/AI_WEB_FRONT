@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './SignupPage.css';
-import checkIcon from '../assets/images/cafe_chuchu_check.png';
+//import checkIcon from '../assets/images/cafe_chuchu_check.png';
 import maleIcon from '../assets/images/male_icon.png';
 import femaleIcon from '../assets/images/female_icon.png';
 import cafeLogo from '../assets/images/cafe_chuchu_logo.png';
@@ -10,7 +10,7 @@ import checkIconX from '../assets/images/cafe_chuchu_password_check-X.png';
 
 const SignupPage = () => {
   const navigate = useNavigate();
-  const [isIdChecked, setIsIdChecked] = useState(false);
+  //const [isIdChecked, setIsIdChecked] = useState(false);
   const [idValue, setIdValue] = useState('');
   const [password, setPassword] = useState('');
   const [passwordCheck, setPasswordCheck] = useState('');

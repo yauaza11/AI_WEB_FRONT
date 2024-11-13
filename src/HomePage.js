@@ -163,7 +163,7 @@ const HomePage = () => {
       await fetchFavorites();
     };
     initializeData();
-  }, []);
+  }, [fetchFavorites, fetchUserPreferences]);
 
   const goToMyPage = () => navigate('/mypage');
   const goToKeywordSearch = () => navigate('/keyword-search');

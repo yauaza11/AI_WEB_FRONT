@@ -41,7 +41,7 @@ const MyPage = () => {
     };
 
     fetchProfile();
-  }, [navigate]);
+  }, [navigate,handleLogout]);
 
   // 로그아웃 함수
   const handleLogout = () => {

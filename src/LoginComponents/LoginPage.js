@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './LoginPage.css';
 import cafeLogo from '../assets/images/cafe_chuchu_logo.png';
-import naverLogo from '../assets/images/naver_icon.png';
-import kakaoLogo from '../assets/images/kakao_icon.png';
+//import naverLogo from '../assets/images/naver_icon.png';
+//import kakaoLogo from '../assets/images/kakao_icon.png';
 
 const LoginPage = () => {
   const navigate = useNavigate();
