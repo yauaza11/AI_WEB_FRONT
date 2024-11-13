@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import logo from '../assets/images/cafe_chuchu_logo.png';
 import profileImage from '../assets/images/cafe_chuchu_profile.png';
@@ -18,7 +18,7 @@ const MyPage = () => {
     localStorage.removeItem('token');
     navigate('/login');
   }, [navigate]);
-  
+
   // 프로필 정보 가져오기
   useEffect(() => {
     const fetchProfile = async () => {
